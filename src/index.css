@@ -1,0 +1,89 @@
+body {
+  color: #222;
+  background: #85c9ff;
+  /* background: #f4f4f4; */
+  font: 400 0.9rem Consolas, monospace;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+}
+
+a {
+  color: #3074bb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  padding: 0.6rem;
+  border-radius: 0.35rem;
+  outline: none;
+  margin-right: 0.7rem;
+  border: 0.09rem solid #dddddd;
+  font-family: Consolas, monospace;
+}
+
+button {
+  padding: 0.62rem;
+  border-radius: 0.35rem;
+  border: 0.07rem solid #dddddd;
+  background: transparent;
+  color: #808080;
+  cursor: pointer;
+  font-family: Consolas, monospace;
+}
+
+button:hover {
+  color: #222;
+}
+
+*:focus {
+  outline: none;
+}
+
+footer {
+  margin: 1.5em;
+}
+
+@media (max-width: 720px) {
+  
+  body {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  body {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+}
