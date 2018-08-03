@@ -10,7 +10,7 @@ A simple application created and deployed using Heroku to learn the basics of Re
 
 ## Build and Deploy
 1. Clone the project
-2. Run `npm install`
-3. Run `npm start`
+2. Run `yarn install`
+3. Run `yarn start`
 
 Enjoy!
