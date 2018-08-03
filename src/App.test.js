@@ -28,12 +28,15 @@ describe('App', () => {
 
 describe('Search', () => {
   
+  const props = {
+    onChange: jest.fn(),
+    onSubmit: jest.fn()
+  }
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-      <Search
-        onChange={test}
-        onSubmit={test}>
+      <Search {...props} >
         Search
       </Search>
       
@@ -43,7 +46,7 @@ describe('Search', () => {
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
-      <Search>Search</Search>
+      <Search {...props}>Search</Search>
     );
 
     let tree = component.toJSON();
@@ -54,15 +57,19 @@ describe('Search', () => {
 
 describe('Button', () => {
   
+  const props = {
+    onClick: jest.fn()
+  }
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Button>Click Me!</Button>, div);
+    ReactDOM.render(<Button {...props}>Click Me!</Button>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
-      <Button>Click Me!</Button>
+      <Button {...props}>Click Me!</Button>
     );
 
     let tree = component.toJSON();
@@ -71,8 +78,8 @@ describe('Button', () => {
 
   it('says click me', () => {
     const element = shallow(
-      <Button>Click Me!</Button>
-    )
+      <Button {...props}>Click Me!</Button>
+    );
 
     expect(element.contains("Click Me!")).toBe(true);
   });
@@ -87,13 +94,14 @@ describe('Table', () => {
       {title: '2', author: '2', num_comments: 1, points: 2, objectID: 'z'}
     ],
     sortKey: 'TITLE',
-    isSortReverse: false
+    isSortReverse: false,
+    onDismiss: jest.fn()
   };
   
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Table {... props} />, div);
-    // ReactDOM.unmountComponentAtNode(div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {

@@ -7,6 +7,20 @@ exports[`App has a valid snapshot 1`] = `
   <div
     className="interactions"
   >
+    <img
+      alt="Bits Speech Bubble"
+      src="pixel-speech-bubble.png"
+    />
+    <h1
+      className="title"
+    >
+      Snews
+    </h1>
+    <h2
+      className="subtitle"
+    >
+      Bits and Bytes from the Internet
+    </h2>
     <form
       onSubmit={[Function]}
     >
@@ -16,6 +30,7 @@ exports[`App has a valid snapshot 1`] = `
         value="redux"
       />
       <button
+        className="button-visible"
         type="submit"
       >
         Search
@@ -31,7 +46,7 @@ exports[`App has a valid snapshot 1`] = `
       <span
         style={
           Object {
-            "width": "40%",
+            "width": "50%",
           }
         }
       >
@@ -40,16 +55,13 @@ exports[`App has a valid snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          <i
-            className="fa fa-caret-down"
-          />
           Title
         </button>
       </span>
       <span
         style={
           Object {
-            "width": "30%",
+            "width": "20%",
           }
         }
       >
@@ -58,9 +70,6 @@ exports[`App has a valid snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          <i
-            className="fa fa-caret-down"
-          />
           Author
         </button>
       </span>
@@ -76,9 +85,6 @@ exports[`App has a valid snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          <i
-            className="fa fa-caret-down"
-          />
           Comments
         </button>
       </span>
@@ -94,9 +100,6 @@ exports[`App has a valid snapshot 1`] = `
           onClick={[Function]}
           type="button"
         >
-          <i
-            className="fa fa-caret-down"
-          />
           Points
         </button>
       </span>
@@ -111,7 +114,7 @@ exports[`App has a valid snapshot 1`] = `
       </span>
     </div>
   </div>
-  <div
+  <section
     className="interactions"
   >
     <div>
@@ -119,14 +122,29 @@ exports[`App has a valid snapshot 1`] = `
         className="fa fa-spinner fa-spin"
       />
     </div>
-  </div>
+  </section>
+  <footer
+    className="interactions"
+  >
+    <div>
+      Pulled from 
+      <a
+        href="https://news.ycombinator.com/"
+      >
+        Hacker News
+      </a>
+    </div>
+    <div>
+      2018 © Rebecca Song
+    </div>
+  </footer>
 </div>
 `;
 
 exports[`Button has a valid snapshot 1`] = `
 <button
   className=""
-  onClick={undefined}
+  onClick={[Function]}
   type="button"
 >
   Click Me!
@@ -135,14 +153,15 @@ exports[`Button has a valid snapshot 1`] = `
 
 exports[`Search has a valid snapshot 1`] = `
 <form
-  onSubmit={undefined}
+  onSubmit={[Function]}
 >
   <input
-    onChange={undefined}
+    onChange={[Function]}
     type="text"
     value={undefined}
   />
   <button
+    className="button-visible"
     type="submit"
   >
     Search
@@ -160,25 +179,7 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       style={
         Object {
-          "width": "40%",
-        }
-      }
-    >
-      <button
-        className="button-inline button-active"
-        onClick={[Function]}
-        type="button"
-      >
-        <i
-          className="fa fa-caret-down"
-        />
-        Title
-      </button>
-    </span>
-    <span
-      style={
-        Object {
-          "width": "30%",
+          "width": "50%",
         }
       }
     >
@@ -187,9 +188,21 @@ exports[`Table has a valid snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="fa fa-caret-down"
-        />
+        Title
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "20%",
+        }
+      }
+    >
+      <button
+        className="button-inline"
+        onClick={[Function]}
+        type="button"
+      >
         Author
       </button>
     </span>
@@ -205,9 +218,6 @@ exports[`Table has a valid snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="fa fa-caret-down"
-        />
         Comments
       </button>
     </span>
@@ -223,9 +233,6 @@ exports[`Table has a valid snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="fa fa-caret-down"
-        />
         Points
       </button>
     </span>
@@ -245,7 +252,7 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       style={
         Object {
-          "width": "40%",
+          "width": "50%",
         }
       }
     >
@@ -258,7 +265,7 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       style={
         Object {
-          "width": "30%",
+          "width": "20%",
         }
       }
     >
@@ -290,7 +297,7 @@ exports[`Table has a valid snapshot 1`] = `
       }
     >
       <button
-        className="button-inline"
+        className="button-inline dismiss-btn"
         onClick={[Function]}
         type="button"
       >
@@ -304,7 +311,7 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       style={
         Object {
-          "width": "40%",
+          "width": "50%",
         }
       }
     >
@@ -317,7 +324,7 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       style={
         Object {
-          "width": "30%",
+          "width": "20%",
         }
       }
     >
@@ -349,7 +356,7 @@ exports[`Table has a valid snapshot 1`] = `
       }
     >
       <button
-        className="button-inline"
+        className="button-inline dismiss-btn"
         onClick={[Function]}
         type="button"
       >
