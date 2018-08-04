@@ -40,7 +40,7 @@ jobs:
       # run tests!
       - run:
           name: Run Test Suites
-          command: yarn test --ci --runInBand --reporters=default --reporters=jest-junit
+          command: yarn test
           environment:
             JEST_JUNIT_OUTPUT: "reports/jest/results.xml"
       - store_test_results:
