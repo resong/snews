@@ -42,11 +42,11 @@ jobs:
           name: Jest Suite
           command: ./node_modules/jest/node_modules/.bin/jest tests --ci --runInBand --reporters=default --reporters=jest-junit
           environment:
-            JEST_JUNIT_OUTPUT: "reports/junit/jest-results.xml"
+            JEST_JUNIT_OUTPUT: "reports/jest/results.xml"
       - store_test_results:
-          path: reports/junit
+          path: reports
       - store_artifacts:
-          path: reports/junit
+          path: reports
 
   deploy:
     docker:
