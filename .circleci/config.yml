@@ -40,7 +40,7 @@ jobs:
       # run tests!
       - run:
           name: Jest Suite
-          command: yarn ~/repo/node_modules/jest/bin tests --ci --runInBand --testResultsProcessor="jest-junit"
+          command: yarn ~/repo/node_modules/jest/bin/jest tests --ci --runInBand --testResultsProcessor="jest-junit"
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
   deploy:
