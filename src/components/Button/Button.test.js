@@ -22,6 +22,13 @@ describe("Button", () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  it("has a valid snapshot", () => {
+    const component = renderer.create(btn);
+
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it("requires onClick prop", () => {
     expect(mount(btn).props().onClick).toBeDefined();
   });
@@ -32,16 +39,9 @@ describe("Button", () => {
     expect(element.contains("Click Me!")).toBe(true);
   });
 
-  it("calls onClick when clicked", () => {
+  test("calls onClick when clicked", () => {
     const element = mount(btn).find("button");
     element.simulate("click");
     expect(onClick).toBeCalled();
-  });
-
-  test("has a valid snapshot", () => {
-    const component = renderer.create(btn);
-
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
   });
 });
