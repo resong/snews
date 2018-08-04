@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "circle": "yarn ~/node_modules/jest/node_modules/.bin/jest tests --ci --runInBand --testResultsProcessor='jest-junit'",
+    "circle": "./node_modules/jest tests --ci --runInBand --testResultsProcessor='jest-junit'",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
