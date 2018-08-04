@@ -40,7 +40,7 @@ jobs:
       # run tests!
       - run:
           name: Jest Suite
-          command: yarn circle
+          command: sudo yarn circle
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/jest-results.xml"
       - store_test_results:
