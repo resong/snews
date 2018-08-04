@@ -34,6 +34,14 @@ describe("Search", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it("has an input and a button", () => {
+    const input = shallow(searchForm).find("input");
+    expect(input).toBeDefined();
+
+    const btn = shallow(searchForm).find("button");
+    expect(btn).toBeDefined();
+  });
+
   test("calls onChange when input changes", () => {
     const input = shallow(searchForm).find("input");
     input.simulate("change", "Different Input");
