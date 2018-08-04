@@ -8,7 +8,7 @@ import App, { Search, Button, Table } from './App';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('App', () => {
-  
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
@@ -25,7 +25,7 @@ describe('App', () => {
 });
 
 describe('Search', () => {
-  
+
   const props = {
     onChange: jest.fn(),
     onSubmit: jest.fn()
@@ -37,7 +37,7 @@ describe('Search', () => {
       <Search {...props} >
         Search
       </Search>
-      
+
       , div);
     ReactDOM.unmountComponentAtNode(div);
   });
@@ -54,7 +54,7 @@ describe('Search', () => {
 });
 
 describe('Button', () => {
-  
+
   const props = {
     onClick: jest.fn()
   }
@@ -88,23 +88,23 @@ describe('Table', () => {
 
   const props = {
     list: [
-      {title: '1', author: '1', num_comments: 1, points: 2, objectID: 'y'},
-      {title: '2', author: '2', num_comments: 1, points: 2, objectID: 'z'}
+      { title: '1', author: '1', num_comments: 1, points: 2, objectID: 'y' },
+      { title: '2', author: '2', num_comments: 1, points: 2, objectID: 'z' }
     ],
     sortKey: 'TITLE',
     isSortReverse: false,
     onDismiss: jest.fn()
   };
-  
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Table {... props} />, div);
+    ReactDOM.render(<Table {...props} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
-      <Table {... props} />
+      <Table {...props} />
     );
 
     let tree = component.toJSON();
