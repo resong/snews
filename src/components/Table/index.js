@@ -12,15 +12,13 @@ class Table extends Component {
       sortKey: "NONE",
       isSortReverse: false
     };
-
-    this.onSort = this.onSort.bind(this);
   }
 
-  onSort(sortKey) {
+  onSort = sortKey => {
     const isSortReverse =
       this.state.sortKey === sortKey && !this.state.isSortReverse;
     this.setState({ sortKey, isSortReverse });
-  }
+  };
 
   render() {
     const { list, onDismiss } = this.props;

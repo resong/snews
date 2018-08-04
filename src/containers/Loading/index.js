@@ -1,5 +1,5 @@
 import React from "react";
-import { Loading } from "../components/Loading";
+import { Loading } from "../../components/Loading";
 
 // HOC Sample - Prepend "with"
 // Conditional Rendering is a good use case for HOCs
