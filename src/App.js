@@ -7,6 +7,7 @@ import pixelSpeechBubble from "./assets/pixel-speech-bubble.png";
 import "./App.css";
 
 import Search from "./components/Search";
+import Button from "./components/Button";
 
 const DEFAULT_QUERY = "redux";
 const DEFAULT_HPP = "20";
@@ -281,18 +282,6 @@ Table.propTypes = {
   onSort: PropTypes.func,
   sortKey: PropTypes.string,
   isSortReverse: PropTypes.bool
-};
-
-const Button = ({ onClick, className = "", children }) => (
-  <button type="button" onClick={onClick} className={className}>
-    {children}
-  </button>
-);
-
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired
 };
 
 const Loading = () => (
