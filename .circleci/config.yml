@@ -38,7 +38,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-       - run:
+      - run:
           name: Jest Suite
           command: yarn jest tests --ci --runInBand --testResultsProcessor="jest-junit"
           environment:
