@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
-import Enzyme, { mount } from "enzyme";
+import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import Button from "../Button";
@@ -30,17 +30,17 @@ describe("Button", () => {
   });
 
   it("requires onClick prop", () => {
-    expect(mount(btn).props().onClick).toBeDefined();
+    expect(shallow(btn).props().onClick).toBeDefined();
   });
 
   it("says 'Click Me!'", () => {
-    const element = mount(btn).find("button");
+    const element = shallow(btn).find("button");
 
     expect(element.contains("Click Me!")).toBe(true);
   });
 
   test("calls onClick when clicked", () => {
-    const element = mount(btn).find("button");
+    const element = shallow(btn).find("button");
     element.simulate("click");
     expect(onClick).toBeCalled();
   });

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
-import Enzyme, { shallow, mount } from "enzyme";
+import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import Search from "../Search";
@@ -49,8 +49,8 @@ describe("Search", () => {
   });
 
   test("calls onSubmit when search text is submitted", () => {
-    const form = mount(searchForm).find("form");
+    const form = shallow(searchForm).find("form");
     form.simulate("submit");
-    expect(onSubmit).toHaveBeenCalled();
+    expect(onSubmit).toHaveBeenCalledTimes(1);
   });
 });
