@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:6.10
-      
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -27,20 +27,27 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: 
+      - run:
           name: Install Dependencies
-          command: yarn install
+          command: sudo yarn install
 
       - save_cache:
           name: Save Package Cache
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
       # run tests!
-      - run: 
-          name: Run Tests
-          command: yarn test
+      - run:
+          name: Jest Suite
+          command: ./node_modules/jest/node_modules/.bin/jest tests --ci --runInBand --reporters=default --reporters=jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/jest/results.xml"
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
   deploy:
     docker:
       - image: buildpack-deps:trusty
