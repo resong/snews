@@ -6,7 +6,7 @@ import "./App.css";
 import Search from "./components/Search";
 import Table from "./components/Table";
 
-import { ButtonWithLoading } from "./containers";
+import { ButtonWithLoading } from "./components/Button/WithLoading";
 
 import {
   DEFAULT_QUERY,
