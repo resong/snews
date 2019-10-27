@@ -2,12 +2,11 @@
 
 exports[`Search has a valid snapshot 1`] = `
 <form
-  onSubmit={[Function]}
+  onSubmit={[MockFunction]}
 >
   <input
-    onChange={[Function]}
+    onChange={[MockFunction]}
     type="text"
-    value={undefined}
   />
   <button
     className="button-visible"

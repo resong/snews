@@ -87,9 +87,7 @@ exports[`Table has a valid snapshot 1`] = `
         }
       }
     >
-      <a
-        href={undefined}
-      >
+      <a>
         1
       </a>
     </span>
@@ -146,9 +144,7 @@ exports[`Table has a valid snapshot 1`] = `
         }
       }
     >
-      <a
-        href={undefined}
-      >
+      <a>
         2
       </a>
     </span>

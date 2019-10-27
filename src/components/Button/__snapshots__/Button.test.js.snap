@@ -3,7 +3,7 @@
 exports[`Button has a valid snapshot 1`] = `
 <button
   className=""
-  onClick={[Function]}
+  onClick={[MockFunction]}
   type="button"
 >
   Click Me!
